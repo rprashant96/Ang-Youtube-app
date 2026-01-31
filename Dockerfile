@@ -29,7 +29,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy dist app
-COPY --from=build /app/dist/Ang-Cert /usr/share/nginx/html/
+COPY --from=build /app/dist/Ang-Cert/browser /usr/share/nginx/html/
 
 # Expose HTTP port
 EXPOSE 80
